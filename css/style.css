@@ -1,29 +1,36 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-a{
+
+a {
     text-decoration: none;
 }
-li{
+
+li {
     list-style: none;
 }
-.fa-caret-left, .fa-caret-right{
+
+.fa-caret-left,
+.fa-caret-right {
     color: white;
     cursor: pointer;
     font-size: 26px;
 }
-h1{
+
+h1 {
     font-family: "Ropa Sans", sans-serif;
     letter-spacing: 10px;
     font-weight: 400;
     color: #FFD600;
 }
-.wrapper{
+
+.wrapper {
     width: 100%;
     height: auto;
     background-color: #424242;
 }
+
 header {
     display: flex;
     background-image: url('../img/header-background.png');
@@ -32,47 +39,55 @@ header {
     background-size: cover;
     align-items: center;
 }
+
 header h1 {
-  font-size: 4rem;
-  position: absolute;
-  padding-left: 5%;
+    font-size: 4rem;
+    position: absolute;
+    padding-left: 5%;
 }
-.container{
+
+.container {
     width: 70%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     padding: 20px 40px 20px 40px;
 }
-.card{
-    width: 500px;
+
+.card {
+    width: 400px;
     border-radius: 15px;
     box-sizing: border-box;
-    box-shadow: 1px 1px 2px rgba(255,255,255,0.3);
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
     overflow: hidden;
     margin-top: -80px;
     margin-bottom: 100px;
     background-color: #C4C4C4;
 }
-.card .card-header{
+
+.card .card-header {
     background-color: #535556;
     height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.card-secondary{
+
+.card-secondary {
     background-color: #748687 !important;
 }
-.card .card-header h1{
+
+.card .card-header h1 {
     font-weight: 600;
     font-size: 30px;
     text-align: center;
 }
-.card .card-body{
+
+.card .card-body {
     background-color: #C4C4C4;
 }
-.card .card-body ul li{
+
+.card .card-body ul li {
     font-family: "Ropa Sans", sans-serif;
     letter-spacing: 8px;
     font-size: 26px;
@@ -80,67 +95,89 @@ header h1 {
     padding: 15px 25px;
     cursor: pointer;
 }
-.card .card-body ul li:nth-child(odd):hover, .card .card-body ul li:nth-child(even):hover, .card .card-body ul li:nth-child(odd).active, .card .card-body ul li:nth-child(even).active{
+
+.card .card-body ul li:nth-child(odd):hover,
+.card .card-body ul li:nth-child(even):hover,
+.card .card-body ul li:nth-child(odd).active,
+.card .card-body ul li:nth-child(even).active {
     background-color: #444444;
     color: #ffffff;
     transition: 0.5s;
 }
-.card .card-body ul li:nth-child(odd){
+
+.card .card-body ul li:nth-child(odd) {
     color: #ffffff;
     background-color: #8E8E8E;
     transition: 0.5s;
 }
-.card .card-body ul li:nth-child(even){
+
+.card .card-body ul li:nth-child(even) {
     color: #535556;
     background-color: #E1DEDE;
     transition: 0.5s;
 }
-.card .card-footer{
+
+.card .card-footer {
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     padding: 10px;
 }
-.card .card-footer ul{
+
+.card .card-footer ul {
     display: flex;
 }
-.card .card-footer ul li{
+
+.card .card-footer ul li {
     font-size: 32px;
     letter-spacing: 20px;
 }
-.card .card-footer ul li i{
+
+.card .card-footer ul li i {
     font-size: 42px;
     transition: 0.5s;
 }
-.card .card-footer ul li i:hover{
+
+.card .card-footer ul li i:hover {
     color: #444444;
     transition: 0.5s;
 }
-.card .card-footer ul li span{
+
+.card .card-footer ul li span {
     font-weight: bold;
 }
-.card .card-body .detail-list li:nth-child(odd){
+
+.card .card-body .detail-list li:nth-child(odd) {
     color: #000;
     background-color: #C4C4C4;
     transition: 0.5s;
 }
-.card .card-body .detail-list li:nth-child(even){
+
+.card .card-body .detail-list li:nth-child(even) {
     color: #ffffff;
     background-color: #8E8E8E;
     transition: 0.5s;
 }
-.card .card-body .detail-list li .title{
+
+.card .card-body .detail-list li .title {
     font-weight: 600;
     margin-bottom: 10px;
 }
-.card .card-body .detail-list li .item-list .item{
+
+.card .card-body .detail-list li .item-list .item {
     font-size: 20px;
     letter-spacing: 5px;
     line-height: 25px;
     display: block;
     font-weight: 600;
 }
+
+
 /*.detail-list li{*/
+
+
 /*    */
+
+
 /*}*/
