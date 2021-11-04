@@ -1,35 +1,48 @@
-let listOfCharacters = [];
-let page = 1;
-fetchList();
-renderPageNumber();
-function fetchList() {
-  fetch(`https://swapi.dev/api/people/?page=${page}`)
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data.results);
-      listOfCharacters = data.results;
-      renderList();
-    });
-}
-document.querySelector(".pre").addEventListener("click", () => {
-  page--;
-  fetchList();
-});
-document.querySelector(".next").addEventListener("click", () => {
-  page++;
-  fetchList();
-});
+console.clear();
+/* Array.from(data).map( item => {
+    let row = document.createElement('tr');
+    let titleColumn = document.createElement('td');
+    titleColumn.innerText = item.title;
+    let titleBody = document.createElement('td');
+    titleBody.innerText = item.body;
+    row.appendChild(titleColumn);
+    row.appendChild(titleBody);
+    container.appendChild(row);
+ 
+}) 
 
-function renderList() {
-  let listItems = "";
-  for (let char of listOfCharacters) {
-    listItems += `<li>${char.name}</li>`;
-  }
+let container = document.querySelector('tbody');
+*/
 
-  document.querySelector("ul").innerHTML = listItems;
-  renderPageNumber();
+const makeRequest = (method, url, data) => {
+    let xml = new XMLHttpRequest();
+    xml.open(method,url);
+   xml.onload = () => {
+    let data = xml.response;
+     console.log(JSON.parse(data));
+      
+     
+   }
+
+   xml.onerror = () => {
+       console.log('we don\' get any data');
+   }
+    xml.send(JSON.stringify);
+    
 }
 
-function renderPageNumber() {
-  document.querySelector(".page").innerText = page;
+const getdata = () => {
+     makeRequest('get', 'https://swapi.dev/api/people/?page=${page}');
+  
 }
+
+const postdata = () => {
+    makeRequest('post','https://swapi.dev/api/people/?page=${page}');
+    method: 'POST',
+    body: JSON.stringify({
+        character,
+    })
+}
+
+
+getdata();
