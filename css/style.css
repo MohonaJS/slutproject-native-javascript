@@ -1,3 +1,5 @@
+/* Defult */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +12,9 @@ a {
 li {
     list-style: none;
 }
+
+
+/* 1/8 */
 
 .fa-caret-left,
 .fa-caret-right {
@@ -31,6 +36,9 @@ h1 {
     background-color: #424242;
 }
 
+
+/* header */
+
 header {
     display: flex;
     background-image: url('../img/header-background.png');
@@ -46,6 +54,9 @@ header h1 {
     padding-left: 5%;
 }
 
+
+/* container */
+
 .container {
     width: 70%;
     margin: 0 auto;
@@ -53,6 +64,9 @@ header h1 {
     justify-content: space-between;
     padding: 20px 40px 20px 40px;
 }
+
+
+/* first class card */
 
 .card {
     width: 400px;
@@ -73,14 +87,17 @@ header h1 {
     align-items: center;
 }
 
-.card-secondary {
-    background-color: #748687 !important;
-}
-
 .card .card-header h1 {
     font-weight: 600;
     font-size: 30px;
     text-align: center;
+}
+
+
+/* Second class card */
+
+.card-secondary {
+    background-color: #748687 !important;
 }
 
 .card .card-body {
@@ -96,6 +113,9 @@ header h1 {
     cursor: pointer;
 }
 
+
+/* Hover class card */
+
 .card .card-body ul li:nth-child(odd):hover,
 .card .card-body ul li:nth-child(even):hover,
 .card .card-body ul li:nth-child(odd).active,
@@ -104,6 +124,14 @@ header h1 {
     color: #ffffff;
     transition: 0.5s;
 }
+
+.card .card-footer ul li i:hover {
+    color: #444444;
+    transition: 0.5s;
+}
+
+
+/* Odd and even */
 
 .card .card-body ul li:nth-child(odd) {
     color: #ffffff;
@@ -116,6 +144,21 @@ header h1 {
     background-color: #E1DEDE;
     transition: 0.5s;
 }
+
+.card .card-body .detail-list li:nth-child(odd) {
+    color: #000;
+    background-color: #C4C4C4;
+    transition: 0.5s;
+}
+
+.card .card-body .detail-list li:nth-child(even) {
+    color: #ffffff;
+    background-color: #8E8E8E;
+    transition: 0.5s;
+}
+
+
+/*Class card footer*/
 
 .card .card-footer {
     height: 200px;
@@ -139,25 +182,8 @@ header h1 {
     transition: 0.5s;
 }
 
-.card .card-footer ul li i:hover {
-    color: #444444;
-    transition: 0.5s;
-}
-
 .card .card-footer ul li span {
     font-weight: bold;
-}
-
-.card .card-body .detail-list li:nth-child(odd) {
-    color: #000;
-    background-color: #C4C4C4;
-    transition: 0.5s;
-}
-
-.card .card-body .detail-list li:nth-child(even) {
-    color: #ffffff;
-    background-color: #8E8E8E;
-    transition: 0.5s;
 }
 
 .card .card-body .detail-list li .title {
@@ -172,12 +198,3 @@ header h1 {
     display: block;
     font-weight: 600;
 }
-
-
-/*.detail-list li{*/
-
-
-/*    */
-
-
-/*}*/
