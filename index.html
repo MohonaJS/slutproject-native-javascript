@@ -23,58 +23,40 @@
             </h1>
         </header>
         <section class="container">
-            <div class="card">
+            <div class="card" data-people>
                 <div class="card-header">
                     <h1>Characters</h1>
                 </div>
+                <div class="card-loader"></div>
                 <div class="card-body">
-                    <ul>
-                        <li>LukeSkywalke</li>
-                        <li>LukeSkywalke</li>
-                        <li class="active">LukeSkywalke</li>
-                        <li>LukeSkywalke</li>
-                        <li>LukeSkywalke</li>
-                        <li>LukeSkywalke</li>
+                    <ul data-people-list>
                     </ul>
                 </div>
                 <div class="card-footer">
                     <ul>
-                        <li><i class="fas fa-caret-left"></i></li>
-                        <li><span>1</span></li>
+                        <li data-prev-page><i class="fas fa-caret-left"></i></li>
+                        <li><span data-current-page-number></span></li>
                         <li><span>/</span></li>
-                        <li><span>8</span></li>
-                        <li><i class="fas fa-caret-right"></i></li>
+                        <li><span data-page-count-number></span></li>
+                        <li data-next-page><i class="fas fa-caret-right"></i></li>
                     </ul>
                 </div>
             </div>
-            <div class="card">
+            <div class="card current-person" data-current-person>
                 <div class="card-header card-secondary">
                     <h1>Details</h1>
                 </div>
+                <div class="card-loader"></div>
                 <div class="card-body">
                     <ul class="detail-list">
                         <li>
-                            <h3 class="title">Look Skajwålkä</h3>
-                            <div class="item-list">
-                                <span class="item">Height: 172cm</span>
-                                <span class="item">Mass: 77kg</span>
-                                <span class="item">Haircolor: blond</span>
-                                <span class="item">Skincolor: fair</span>
-                                <span class="item">Eyecolor: blue</span>
-                                <span class="item">Birth_year: 19BBY</span>
-                                <span class="item">Gender: male</span>
+                            <h3 class="title" data-current-person-title></h3>
+                            <div class="item-list" data-current-person-details>
                             </div>
                         </li>
                         <li>
-                            <h3 class="title">Tattoii</h3>
-                            <div class="item-list">
-                                <span class="item">Rotationperiod: 23h</span>
-                                <span class="item">Orbitalperiod: 304days </span>
-                                <span class="item">Diameter: 10465km</span>
-                                <span class="item">Climate": Arid
-                            </span>
-                                <span class="item">Gravity: 1standard</span>
-                                <span class="item">Terrain: Desert</span>
+                            <h3 class="title" data-current-person-meta-title></h3>
+                            <div class="item-list" data-current-person-meta-details>
                             </div>
                         </li>
                     </ul>
