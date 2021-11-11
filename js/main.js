@@ -15,32 +15,32 @@ class App {
     CURRENT_PERSON_EL;
 
     constructor() {
-        this._bindElements();
-        this._bindEvents();
-        this._getPeople();
-    }
-
+            this._bindElements();
+            this._bindEvents();
+            this._getPeople();
+        }
+        // Sparar elementen som variabler
     _bindElements() {
-        this.PEOPLE_EL = document.querySelector('[data-people]');
-        this.PREV_PAGE_EL = document.querySelector('[data-prev-page]')
-        this.NEXT_PAGE_EL = document.querySelector('[data-next-page]')
-        this.CURRENT_PAGE_NUMBER_EL = document.querySelector('[data-current-page-number]')
-        this.PAGE_COUNT_EL = document.querySelector('[data-page-count-number]')
-        this.CURRENT_PERSON_EL = document.querySelector('[data-current-person]')
-    }
-
+            this.PEOPLE_EL = document.querySelector('[data-people]');
+            this.PREV_PAGE_EL = document.querySelector('[data-prev-page]')
+            this.NEXT_PAGE_EL = document.querySelector('[data-next-page]')
+            this.CURRENT_PAGE_NUMBER_EL = document.querySelector('[data-current-page-number]')
+            this.PAGE_COUNT_EL = document.querySelector('[data-page-count-number]')
+            this.CURRENT_PERSON_EL = document.querySelector('[data-current-person]')
+        }
+        // Kontroll delen ifrån MVC
     _bindEvents() {
-        this.PREV_PAGE_EL.addEventListener('click', () => {
-            if (!this.PEOPLE.previous) return;
-            this._getPage(this.PEOPLE.previous);
-        })
+            this.PREV_PAGE_EL.addEventListener('click', () => {
+                if (!this.PEOPLE.previous) return;
+                this._getPage(this.PEOPLE.previous);
+            })
 
-        this.NEXT_PAGE_EL.addEventListener('click', () => {
-            if (!this.PEOPLE.next) return;
-            this._getPage(this.PEOPLE.next);
-        })
-    }
-
+            this.NEXT_PAGE_EL.addEventListener('click', () => {
+                if (!this.PEOPLE.next) return;
+                this._getPage(this.PEOPLE.next);
+            })
+        }
+        // Laddar in en sida asynkront 
     async _getPage(url) {
         this.PAGE = new URL(url).searchParams.get('page');
         this.PEOPLE_EL.classList.add('is-loading')
@@ -72,10 +72,10 @@ class App {
     }
 
     async _getPlanet(url) {
-        const response = await fetch(url);
-        this.CURRENT_PERSON_PLANET = await response.json();
-    }
-
+            const response = await fetch(url);
+            this.CURRENT_PERSON_PLANET = await response.json();
+        }
+        // Uppdaterar HTML och view delen 
     _updateHTML() {
         this.PEOPLE_EL.querySelector('[data-people-list]').innerHTML = ""
 
@@ -115,5 +115,5 @@ class App {
         }
     }
 }
-
+// Instansiera en ny app när window har laddats 
 window.onload = new App();
